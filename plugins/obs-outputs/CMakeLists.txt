@@ -162,6 +162,7 @@ add_library(obs-outputs MODULE
 	${obs-outputs_webrtc_HEADERS})
 
 target_include_directories(obs-outputs
+	PRIVATE ${WEBRTC_INCLUDE_DIRS}
 	PUBLIC ${websocketclient_SOURCE_DIR}
 	PUBLIC "${CMAKE_CURRENT_LIST_DIR}/../websocket-client") # for WebsocketClient.h
 
